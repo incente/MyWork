@@ -1,0 +1,15 @@
+.machine  {
+    display: flex;
+}
+.console    {
+    display: flex;
+}
+#mode   {
+    display: flex;
+}
+#middle {
+    display: flex;
+}
+#money  {
+    display: flex;
+}
