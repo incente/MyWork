@@ -7,8 +7,8 @@ I came to the conclusion if i really want to learn it. It has to be my main focu
 And set the goal to code at least 2 hrs a day on personal projects. Besides that i exercise on freecodecamp and try to get comfortable with solidity.
 I want to share my personal projects right here and invite you to follow my journey.
 
-13. October 22|
+13. October 22 | 
   I started my slot machine project with the first lines of JS, HTML5 and CSS.
  
-14. October 22|
+14. October 22 | 
   I completle gave up my first documents and started again. This time i will focus on JS first.
