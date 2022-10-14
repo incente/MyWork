@@ -47,36 +47,27 @@
         </div>
     </div>
     <div class="console">
-        <div id="mode">
             <div id="currentmode">
-                <p id="current-mode"></p>
+                <p id="current-mode">1</p>
             </div>
             <div id="changemode">
-                <button onclick="changemode()">Change Mode</button>
+                <button class="button-console" onclick="changemode()">Change Mode</button>
             </div>
-        </div>
-        <div id="middle">
             <div id="spin">
-                <button onclick="spin()">Spin</button>
+                <button class="button-console" onclick="spin()">Spin</button>
             </div>
             <div id="multiplier">
-                <p id="multi"></p>
+                <p id="multi">1x</p>
             </div>
-        </div>
-        <div id="money">
             <div id="bet">
-                <input type="number" id="bet-input" value= 1 placeholder="Bet" onblur="currentvalue()">
+                <input class="input-console" type="number" id="bet-input" value= 1 placeholder="Bet" onblur="currentvalue()">
             </div>
             <div id="currentbet">
-                <p id="current-bet"></p>
+                <p id="current-bet">1 USD</p>
             </div>
             <div id="account">
-                <p id="wallet"></p>
+                <p id="wallet">3000 USD</p>
             </div>
-        </div>
-    </div>
-    <div class="dope">
-        <div id="dopamin"></div>
     </div>
 </body>
 </html>
