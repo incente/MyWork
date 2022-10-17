@@ -7,25 +7,11 @@ const compare = (a, b) => {
     return JSON.stringify(a) === JSON.stringify(b);
 }
 
-const max_fields = 15; // amount of fields that are showed
 const amount_values = 10; // how many different values can u cat
 const row_length = 5; // length of one row
 const amount_rows = 3; // amount of rows
 
-const win_row = { // this is an array with winning options for a row
-    full_row: { // in this object are winning options with the full row 
-        one: [1, 1, 1, 1, 1],
-        two: [2, 2, 2, 2, 2],
-        three: [3, 3, 3, 3, 3],
-        four: [4, 4, 4, 4, 4],
-        five: [5, 5, 5, 5, 5],
-        six: [6, 6, 6, 6, 6],
-        seven: [7, 7, 7, 7, 7],
-        eight: [8, 8, 8, 8, 8],
-        nine: [9, 9, 9, 9, 9],
-        ten: [0, 0, 0, 0, 0]
-    }
-}
+import * as winningconditionsJs from './winningconditions.js'; // imports a object with all winningconditions
 
 const spin = () => {
     const spin_values = []; // an array with max_fields times a random number till amount_values
@@ -40,6 +26,8 @@ const spin = () => {
     console.log(spin_values); // console.log the three arrays with 5 numbers each
 
     for (let i = 0; i < amount_rows; i++)  { 
-        console.log(compare(spin_values[i], win_row.full_row.ten)) // compares a row in the array with a winning row in the object (atm just winning with a row full of zeros)
+        for (let property in winningconditionsJs.winningconditions.full_row) {
+            console.log(compare(spin_values[i], property)); // compares a row in the array with a winning row in the object (atm just winning with a row full of zeros)
+        }
     }
 }
