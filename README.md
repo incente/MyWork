@@ -20,4 +20,4 @@ I want to share my personal projects right here and invite you to follow my jour
   - (no code cause anniversary with gf)
 
 17. October 22 | 
-  I tried to import an object from a external document. It worked as far as i can tell. But now my spin function wont work anymore.
+  I tried to import an object from a external document. It worked as far as i can tell. But now my spin function does not work anymore.
