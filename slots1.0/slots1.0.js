@@ -11,7 +11,15 @@ const amount_values = 10; // how many different values can u cat
 const row_length = 5; // length of one row
 const amount_rows = 3; // amount of rows
 
-import * as winningconditionsJs from './winningconditions.js'; // imports a object with all winningconditions
+const winningconditions = {
+    full_row: { 
+        one: [1, 1, 1, 1, 1], two: [2, 2, 2, 2, 2], three: [3, 3, 3, 3, 3], four: [4, 4, 4, 4, 4], five: [5, 5, 5, 5, 5], 
+        six: [6, 6, 6, 6, 6], seven: [7, 7, 7, 7, 7], eight: [8, 8, 8, 8, 8], nine: [9, 9, 9, 9, 9], ten: [0, 0, 0, 0, 0]
+    },
+    four_row: {
+
+    }
+}
 
 const spin = () => {
     const spin_values = []; // an array with max_fields times a random number till amount_values
@@ -26,8 +34,9 @@ const spin = () => {
     console.log(spin_values); // console.log the three arrays with 5 numbers each
 
     for (let i = 0; i < amount_rows; i++)  { 
-        for (let property in winningconditionsJs.winningconditions.full_row) {
+        for (let property in winningconditions.full_row) {
             console.log(compare(spin_values[i], property)); // compares a row in the array with a winning row in the object (atm just winning with a row full of zeros)
         }
+     
     }
 }

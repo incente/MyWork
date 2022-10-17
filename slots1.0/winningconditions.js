@@ -1,3 +1,8 @@
+/* 
+import * as winningconditionsJs from './winningconditions.js'; // imports a object with all winningconditions
+
+type="module" 
+
 const winningconditions = {
     full_row: { 
         one: [1, 1, 1, 1, 1], 
@@ -13,3 +18,4 @@ const winningconditions = {
     }
 }
 export {winningconditions};
+*/
