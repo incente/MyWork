@@ -7,7 +7,7 @@ const compare = (a, b) => {
     return JSON.stringify(a) === JSON.stringify(b);
 }
 
-const amount_values = 10; // how many different values can u cat
+const amount_values = 2; // how many different values can u cat
 const row_length = 5; // length of one row
 const amount_rows = 3; // amount of rows
 
@@ -34,9 +34,6 @@ const spin = () => {
     console.log(spin_values); // console.log the three arrays with 5 numbers each
 
     for (let i = 0; i < amount_rows; i++)  { 
-        for (let property in winningconditions.full_row) {
-            console.log(compare(spin_values[i], property)); // compares a row in the array with a winning row in the object (atm just winning with a row full of zeros)
-        }
-     
+            console.log(compare(spin_values[i], winningconditions.full_row.ten)); // compares a row in the array with a winning row in the object (atm just winning with a row full of zeros)
     }
 }
