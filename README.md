@@ -21,3 +21,6 @@ I want to share my personal projects right here and invite you to follow my jour
 
 17. October 22 | 
   I tried to import an object from a external document. It worked as far as i can tell. But now my spin function does not work anymore.
+
+18. October 22 | 
+  Tried out some PHP for school and got depressed instantly. Because i have no idea what im doing. I will get back to JS.
