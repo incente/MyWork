@@ -1,16 +1,13 @@
-const tasks = {};
+const tasks = [];
 
-let amount = 0;
-
-const add = () => {
-    let task = document.getElementById("task").value;
-    tasks[amount] = task;
-    document.getElementById("output").innerHTML += tasks[amount] + "<br>";
-    amount++;
+function create() {
+    let newTask = document.getElementById("newTask").value;
+    tasks.push(newTask);
+    document.getElementById("tasks").innerHTML = tasks;
 }
 
-const remove = () => {
-    let remove = document.getElementById("delete").value;
-    delete tasks[remove];
-    amount--;
+function erase() {
+    let taskErase = (parseInt(document.getElementById("erase").value) - 1);
+    tasks.splice(taskErase, 1);
+    document.getElementById("tasks").innerHTML = tasks;
 }
