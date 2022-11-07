@@ -4,45 +4,51 @@ let msg = document.getElementById("msg");
 let posts = document.getElementById("posts");
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    console.log("button clicked");
-    formValitdation();
-});
+    e.preventDefault()
+  console.log("button clicked")
 
-let formValitdation = () => {
-    if (input.value === "") {
-        msg.innerHTML= "Post cannot be blank";
-        console.log("failure");
-    } else {
-        console.log("success");
+    Validation();
+})
+
+
+let Validation = () => {
+    if (input.value === ""){
+         console.log("failure")
+         msg.innerHTML = "Cannot be blank"
+        
+    }else {
+        console.log("sucesses")
         msg.innerHTML = "";
-        acceptData();
+
+        acceptData()
     }
 };
 
-let data = {};
 
+
+let data = {};
 let acceptData = () => {
-    data["text"] = input.value;
+    data["text"] = input.value
     console.log(data);
-    createPost();
+
+    createPost()
 };
+
 
 let createPost = () => {
     posts.innerHTML += `
     <div>
-        <p>${data.text}</p>
-        <span class="options">
-            <i onClick="editPost(this)" class="fas fa-edit"></i>
-            <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
-        </span>
-    </div>
-    `;
-    input.value = "";
-};
+    <p>${data.text}</p>
+    <span class="options">
+        <i onClick="editPost(this)" class="fa-regular fa-pen-to-square"></i>
+        <i onClick="deletePost(this)" class="fa-solid fa-trash"></i>
+    </span>
+</div>
+    ` ;
+}
 
 let deletePost = (e) => {
-    e.parentElement.parentElement.remove();
+    e.parentElement.parentElement.remove()
 };
 
 let editPost = (e) => {

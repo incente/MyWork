@@ -1,32 +1,28 @@
-body {
-    font-family: sans-serif;
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
     margin: 0 50px;
 }
 
-.container {
+.container{
     display: flex;
     gap: 50px;
 }
 
-#posts {
+#posts{
     width: 400px;
 }
 
-i {
+i{
     cursor: pointer;
 }
 
-#posts div {
+#posts div{
     display: flex;
-    align-items: center;
+    justify-content: center;
     justify-content: space-between;
 }
 
 .options {
     display: flex;
     gap: 25px;
-}
-
-#msg {
-    color: red;
 }
