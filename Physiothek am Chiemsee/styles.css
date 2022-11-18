@@ -1,0 +1,35 @@
+.p-header {
+    color: white;
+    margin-top: -3px;
+}
+
+.address-link, .tel-link, .email-link {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.address-link:hover, .tel-link:hover, .email-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background-color: rgb(34, 34, 34);
+}
+
+.header-row {
+    height: 35px;
+}
+
+.socialmedia-icons {
+    margin-top: 7px;
+}
+
+.info-icons {
+    padding-top: 12px;
+}
+
+.instagram-link {
+    margin-left: 10px;
+}
