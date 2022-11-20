@@ -6,7 +6,6 @@
 .address-link, .tel-link, .email-link {
     color: inherit;
     text-decoration: none;
-    margin-left: 30px;
 }
 
 .address-link:hover, .tel-link:hover, .email-link:hover {
@@ -18,6 +17,12 @@ header {
     background-color: rgb(34, 34, 34);
 }
 
+@media screen and (max-width: 1200px) {
+    .header-container {
+        display: none;
+    }
+}
+
 .header-row {
     height: 35px;
 }
@@ -27,9 +32,27 @@ header {
 }
 
 .info-icons {
-    padding-top: 12px;
+    vertical-align: middle;
 }
 
 .instagram-link {
     margin-left: 10px;
+}
+
+.info-header {
+    text-align: center;
+    padding-top: 9px;
+}
+
+#logo-nav {
+    width: 80%;
+}
+
+#navbar {
+    height: 14vh;
+}
+
+.logo-nav-col {
+    padding-top: 10px;
+    padding-bottom: 10px; 
 }
