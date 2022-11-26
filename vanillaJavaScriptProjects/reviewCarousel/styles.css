@@ -1,0 +1,20 @@
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+#image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.row-pic, .row-h2, .row-p, .row-buttons {
+    padding-top: 30px;
+}
+
+.review {
+    background-color: lightblue;
+    padding: 30px;
+    box-shadow: 5px 5px 5px gray;
+}
