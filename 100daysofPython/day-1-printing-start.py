@@ -11,13 +11,13 @@ print("Day 1 - Python Print Function\nThe function is declared like this:\nprint
 print("Hello " + input("What is your name? ") + "!")
 
 #2.1 print length of inserted data
-print( len( input("Whats your name? ") ) )
+print(len(input("Whats your name? ")))
 
 #2.2 save input data as variable and print it
 name = input("Whats your name? ")
 print(name)
 
-#3.0 band name generator program
+#3. band name generator program
 cityName = input("What's the name of the city you grew up in? ")
 print(cityName)
 petsName = input("What's your pet's name? ")
