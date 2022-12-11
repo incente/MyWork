@@ -27,14 +27,14 @@ row1 = ["⬜️","️⬜️","️⬜️"]
 row2 = ["⬜️","⬜️","️⬜️"]
 row3 = ["⬜️️","⬜️️","⬜️️"]
 map = [row1, row2, row3]
-#print(f"{row1}\n{row2}\n{row3}")
-#position = input("Where do you want to put the treasure? ")
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
 
-#x = int(position[0]) - 1
-#y = int(position[1]) - 1
-#map[y][x] = "X"
+x = int(position[0]) - 1
+y = int(position[1]) - 1
+map[y][x] = "X"
 
-#print(f"{row1}\n{row2}\n{row3}")
+print(f"{row1}\n{row2}\n{row3}")
 
 #3.2 Rock, paper, scissors
 player_input = int(input("Press 1 for Rock, 2 for Paper and 3 for Scissors. "))
