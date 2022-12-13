@@ -23,6 +23,7 @@ digits = int(input("How many numbers would you like?\n"))
 
 passwordList = []
 password = []
+password_str = ""
 
 for n in range(0, letters):
     rand = random.randint(0, len(all_letters) - 1)
@@ -36,11 +37,13 @@ for n in range(0, digits):
     rand = random.randint(0, len(all_digits) - 1)
     passwordList.append(all_digits[rand])
 
-for n in range(0, len(passwordList) - 1):
+for n in range(0, len(passwordList)):
     rand = random.randint(0, len(passwordList) - 1)
     password.append(passwordList[rand])
     passwordList.pop(rand)
 
-print(passwordList)
-print(password)
-print(len(password))
+for n in range(0, len(password)):
+    password_str += password[n]
+    
+print(password_str)
+print(len(password_str))
