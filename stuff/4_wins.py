@@ -39,7 +39,28 @@ def player_select(turn):
     else:
         return player2
 
+def win(gameIcon):
+    if gameIcon == "X":
+        print(f"{player1} wins!")
+    elif gameIcon == "I":
+        print(f"{player2} wins!")
 
+def check(gameIcon):
+    for y in range(1, len(field) + 1):
+        for x in range(0, 3):
+            if field[y][x] == field[y][x+1] == field[y][x+2] == field[y][x+3] == gameIcon:
+                win(gameIcon)
+                print_field()
+                return True
+
+    for y in range(1, 5):
+        for x in range(0, 6):
+            if field[y][x] == field[y+1][x] == field[y+2][x] == field[y+3][x] == gameIcon:
+                win(gameIcon)
+                print_field()
+                return True
+    else:
+        return False
 
 def add(x, y):
     if pos[x] == 0:
@@ -49,21 +70,25 @@ def add(x, y):
         pos[x] -= 1
         field[x][pos[x]] = y
 
-def start(player):
-    col_nr = int(input(f"It is {player}'s turn. Select a column: "))
+def gameicon(player):
     if player == player1:
-        gameIcon = "X"
+        return "X"
     else:
-        gameIcon = "I"
-    add(col_nr, gameIcon)
+        return "I"
 
+def start(player):
+    print_field()
+    col_nr = int(input(f"It is {player}'s turn. Select a column: "))
+    if col_nr > 7:
+        print("That aint no column. Only digits between 1 - 7 count.")
+        start(player_select(turn))
+    else:
+        add(col_nr, gameicon(player))
 
-
+print(f"{player1} your gameicon is {gameicon(player1)}")
+print(f"{player2} your gameicon is {gameicon(player2)}")
 
 while end_of_game == False:
     start(player_select(turn))
+    end_of_game = check(gameicon(player_select(turn)))
     turn += 1
-    print_field()
-
-    if turn == 10:
-        end_of_game = True
