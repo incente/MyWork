@@ -1,3 +1,5 @@
+import os
+
 end_of_game = False
 turn = 0
 
@@ -29,9 +31,12 @@ def print_field():
     print(field[1][4], field[2][4], field[3][4], field[4][4], field[5][4], field[6][4], field[7][4])
     print(field[1][5], field[2][5], field[3][5], field[4][5], field[5][5], field[6][5], field[7][5])
 
+os.system('cls')
 print("Welcome to 4 gewinnt!")
 player1 = input("Player 1 select a username: ")
 player2 = input("Player 2 select a username: ")
+while player2 == player1:
+    player2 = input("Player 2, name is already taken. Select a new one: ")
 
 def player_select(turn):
     if turn % 2 == 0:
@@ -41,8 +46,10 @@ def player_select(turn):
 
 def win(gameIcon):
     if gameIcon == "X":
+        os.system('cls')
         print(f"{player1} wins!")
     elif gameIcon == "I":
+        os.system('cls')
         print(f"{player2} wins!")
 
 def check(gameIcon):
@@ -66,6 +73,7 @@ def add(x, y):
     if pos[x] == 0:
         print("That column is full")
         start(player_select(turn))
+        os.system('cls')
     else:
         pos[x] -= 1
         field[x][pos[x]] = y
@@ -89,6 +97,7 @@ print(f"{player1} your gameicon is {gameicon(player1)}")
 print(f"{player2} your gameicon is {gameicon(player2)}")
 
 while end_of_game == False:
+    os.system('cls')
     start(player_select(turn))
     end_of_game = check(gameicon(player_select(turn)))
     turn += 1
